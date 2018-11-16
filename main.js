@@ -62,7 +62,7 @@ function Rect(x,h,dy){
           this.h +=dr;
         }
       } else{
-          if (this.h > h){
+          if (this.h > innerHeight-mouse.y){
             this.dy+=g;
           this.h-=this.dy;
         }
