@@ -11,11 +11,13 @@ function(){
   init();
   console.log(innerHeight);
 })
+var ismousemove = undefined;
 window.addEventListener('mousemove',
 function(event){
   mouse.x = event.x;
   mouse.y = event.y;
-})
+  })
+
 
 //variables
 var mouse = {
@@ -56,13 +58,13 @@ function Rect(x,h,dy){
     }
 
     this.update = function update(){
-      if (this.h < innerHeight-mouse.y-this.mousedis(this.x) && (mouse.x - this.x)*range < rwidth && (mouse.x - this.x)*range > -rwidth){
+      if (Event.'mousemove'==true && this.h < innerHeight-mouse.y-this.mousedis(this.x) && (mouse.x - this.x)*range < rwidth && (mouse.x - this.x)*range > -rwidth){
           // this.mousedis(this.x);
           if (this.h<(innerHeight-mouse.y)-this.mousedis(this.x)){
           this.h +=dr;
         }
       } else{
-          if (this.h > h){
+          if (event.this.h > h){
             this.dy+=g;
           this.h-=this.dy;
         }
