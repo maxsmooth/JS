@@ -59,7 +59,7 @@ function Rect(x,h,dy){
       if ((mouse.x - this.x)*range < rwidth && (mouse.x - this.x)*range > -rwidth){
           // this.mousedis(this.x);
           if (this.h<mouse.y-Math.pow((this.mousedis(this.x)),1.1)){
-
+          console.log(mouse.y);
           this.h +=dr;
         }
       } else{
