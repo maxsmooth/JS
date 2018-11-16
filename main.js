@@ -66,7 +66,7 @@ function Rect(x,h,dy){
             this.h +=dr;
         }
       } else{
-          if (event.this.h > h){
+          if (this.h > h){
             this.dy+=g;
           this.h-=this.dy;
         }
