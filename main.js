@@ -38,6 +38,7 @@ const widthratio = .3;
 const rwidth = 10;
 const hratio = 0;
 var range;
+const slope = 2;
 var maxheight;
 var rectArray = [];
 var h;
@@ -66,7 +67,7 @@ function Rect(x,h,dy){
 
     this.update = function update(){
       if (disfm(this.x) <= range && (this.h + dr <maxheight-disfm(this.x)) || this.h - this.dy <maxheight-disfm(this.x)){
-          if (this.h < maxheight - disfm(this.x)){
+          if (this.h < maxheight - disfm(this.x)*slope){
             this.h +=dr;
         }
       } else{
