@@ -60,7 +60,7 @@ function Rect(x,h,dy){
     this.update = function update(){
       if ((mouse.x - this.x)*range < rwidth && (mouse.x - this.x)*range > -rwidth){
           // this.mousedis(this.x);
-          if (this.h<innerHeight){
+          if (this.h<innerHeight - (Math.abs(mouse.x-this.x))){
             this.h +=dr;
         }
       } else{
