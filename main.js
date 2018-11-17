@@ -65,7 +65,7 @@ function Rect(x,h,dy){
     }
 
     this.update = function update(){
-      if (disfm(this.x) <= range && (this.h + 5 <maxheight-disfm(this.x)) || this.h - 5 <maxheight-disfm(this.x)){
+      if (disfm(this.x) <= range && (this.h + dr <maxheight-disfm(this.x)) || this.h - dr <maxheight-disfm(this.x)){
           if (this.h < maxheight - disfm(this.x)){
             this.h +=dr;
         }
