@@ -24,7 +24,7 @@ var mouse = {
   x: undefined,
   y: undefined
 }
-const g = 1;
+const g = .8;
 const dr = 30;
 const dy = 1;
 
