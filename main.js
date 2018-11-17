@@ -36,7 +36,7 @@ const colorArray = [
 ]
 const rwidth = 10;
 const hratio = 0;
-const range = undefined;
+var range;
 var maxheight;
 var rectArray = [];
 var h;
