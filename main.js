@@ -23,7 +23,7 @@ var mouse = {
 }
 const g = .1;
 const dr = 50;
-const dy = .1;
+const dy = 0;
 const colorArray = [
   '#112F41',
   '#068587',
