@@ -10,15 +10,12 @@ function(){
   canvas.height = innerHeight;
   init();
 })
-
 window.addEventListener('mousemove',
 function(event){
   mouse.x = event.x;
   mouse.y = event.y;
   maxheight = innerHeight - mouse.y;
   })
-
-
 //variables
 var mouse = {
   x: undefined,
@@ -42,29 +39,24 @@ const slope = 2;
 var maxheight;
 var rectArray = [];
 var h;
-//create rectangles
+//determine distance from the mouse to the block (absolute value)
 function disfm(xpos){
  return Math.abs(mouse.x-xpos); 
 }
-
+//Main "Class"
 function Rect(x,h,dy){
   this.color = colorArray[Math.floor(Math.random()*colorArray.length)];
   this.x=x;
   this.h=h;
   this.dy=dy;
-
+//draw rectangles
   this.draw = function draw(){
     c.beginPath();
     c.fillStyle = this.color
     c.fillRect(this.x, canvas.height-this.h, rwidth, this.h);
 
     }
-
-    this.mousedis = function mousedistance(xpos){
-      return Math.abs(mouse.x-xpos);
-
-    }
-
+//is run with every cycle of the animation function: the logic
     this.update = function update(){
       if (disfm(this.x) <= range && (this.h + dr <maxheight-disfm(this.x)) || this.h - this.dy <maxheight-disfm(this.x)){
           if (this.h < maxheight - disfm(this.x)*slope){
@@ -79,7 +71,7 @@ function Rect(x,h,dy){
         this.draw();
     }
 }
-//Establish Rectangles
+//Creates the rectangle objects and puts them in an array
 function init(){
   range = innerWidth*widthratio;
   rectArray = [];
@@ -93,7 +85,6 @@ function init(){
   }
   console.log(rectArray.length);
 }
-
 //Animation Loop
 function animate(){
   requestAnimationFrame(animate);
@@ -103,9 +94,7 @@ function animate(){
   for (let i=0; i< rectArray.length; i++){
     rectArray[i].update();
   }
-
-
-
 }
+//begin the program loop
 init();
 animate();
