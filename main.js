@@ -28,7 +28,7 @@ var mouse = {
 const g = 1;
 const dr = 30;
 const dy = 1;
-const range = 150;
+const range = innerWidth;
 const colorArray = [
   '#112F41',
   '#068587',
