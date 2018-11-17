@@ -34,7 +34,7 @@ const colorArray = [
   '#F2B134',
   '#ED553B',
 ]
-const widthratio = .5;
+const widthratio = .3;
 const rwidth = 10;
 const hratio = 0;
 var range;
@@ -66,7 +66,7 @@ function Rect(x,h,dy){
 
     this.update = function update(){
       if (disfm(this.x) <= range && (this.h + dr <maxheight-disfm(this.x)) || this.h - dr <maxheight-disfm(this.x)){
-          if (this.h < maxheight - Math.pow(disfm(this.x),1.3)){
+          if (this.h < maxheight - disfm(this.x)){
             this.h +=dr;
         }
       } else{
