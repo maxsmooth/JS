@@ -73,11 +73,9 @@ function Rect(x,h,dy){
       } else if (this.h > h){
           this.dy+=g;
           this.h-=this.dy;
-        }else if (this.dy!=dy){
-          this.dy = dy;
-         }
-      }
-
+              }else if (this.dy!=dy){
+                      this.dy = dy;
+                     }
         this.draw();
     }
 //Establish Rectangles
