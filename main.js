@@ -9,7 +9,6 @@ function(){
   canvas.width = innerWidth;
   canvas.height = innerHeight;
   init();
-  console.log(innerHeight);
 })
 
 window.addEventListener('mousemove',
@@ -28,7 +27,7 @@ var mouse = {
 const g = 1;
 const dr = 30;
 const dy = 1;
-const range = innerWidth;
+
 const colorArray = [
   '#112F41',
   '#068587',
@@ -82,6 +81,7 @@ function Rect(x,h,dy){
 
 //Establish Rectangles
 function init(){
+  const range = innerWidth;
   rectArray = [];
   var numrec=innerWidth/rwidth;
   console.log(numrec);
