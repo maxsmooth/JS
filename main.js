@@ -64,7 +64,7 @@ function Rect(x,h,dy){
             this.h +=dr;
         }
       } else{
-          if (this.h > Math.abs(mouse.x-this.x)*range){
+          if (this.h > innerHeight - Math.abs(mouse.x-this.x)*range){
             this.dy+=g;
           this.h-=this.dy;
         }
