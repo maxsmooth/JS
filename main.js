@@ -74,12 +74,13 @@ function Rect(x,h,dy){
           if (this.h > h){
             this.dy+=g;
           this.h-=this.dy;
+        }else{
+          this.dy = dy;
+          console.log('velocity reset');
+        }
         }
       }
-        if (this.y <= h){
-        this.dy = dy;
-        console.log('velocity reset');
-        }
+
         this.draw();
     }
 }
