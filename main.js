@@ -34,6 +34,7 @@ const colorArray = [
   '#F2B134',
   '#ED553B',
 ]
+const widthratio = .5;
 const rwidth = 10;
 const hratio = 0;
 var range;
@@ -82,7 +83,7 @@ function Rect(x,h,dy){
 
 //Establish Rectangles
 function init(){
-  range = innerWidth;
+  range = innerWidth/widthratio;
   rectArray = [];
   var numrec=innerWidth/rwidth;
   console.log(numrec);
