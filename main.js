@@ -40,7 +40,7 @@ var rectArray = [];
 var h;
 //determine distance from the mouse to the block (absolute value)
 function disfm(xpos){
- return Math.abs(mouse.x-xpos); 
+ return Math.abs(mouse.x-xpos)*slope; 
 }
 //Main "Class"
 function Rect(x,h,dy){
@@ -57,7 +57,7 @@ function Rect(x,h,dy){
 //is run with every cycle of the animation function: the logic
     this.update = function update(){
       if (disfm(this.x) <= range && (this.h + dr <maxheight-disfm(this.x)) || this.h - this.dy <maxheight-disfm(this.x)){
-          if (this.h < maxheight - disfm(this.x)*slope){
+          if (this.h < maxheight - disfm(this.x)){
             this.h = this.h += dr;
           }
       } else if (this.h > h){
