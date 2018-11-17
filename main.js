@@ -27,7 +27,7 @@ var mouse = {
 const g = 1;
 const dr = 30;
 const dy = 1;
-const range = .05;
+const range = 20;
 const colorArray = [
   '#112F41',
   '#068587',
@@ -58,7 +58,7 @@ function Rect(x,h,dy){
     }
 
     this.update = function update(){
-      if (Math.abs((mouse.x - this.x))*range < rwidth){
+      if (Math.abs((mouse.x - this.x)) < range){
           // this.mousedis(this.x);
           if (this.h<innerHeight - (Math.abs(mouse.x-this.x))){
             this.h +=dr;
