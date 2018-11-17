@@ -32,7 +32,7 @@ const colorArray = [
 ]
 const widthratio = .4;
 const rwidth = 10;
-const hratio = 0;
+const hratio = .2;
 var range;
 const slope = 2;
 var maxheight;
