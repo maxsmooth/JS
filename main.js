@@ -80,8 +80,6 @@ function Rect(x,h,dy){
 
         this.draw();
     }
-}
-
 //Establish Rectangles
 function init(){
   range = innerWidth*widthratio;
