@@ -34,7 +34,7 @@ const widthratio = .4;
 const rwidth = 10;
 const hratio = 0;
 var range;
-const slope = 4;
+const slope = 2;
 var maxheight;
 var rectArray = [];
 var h;
