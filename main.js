@@ -75,8 +75,9 @@ function Rect(x,h,dy){
             this.dy+=g;
           this.h-=this.dy;
         }else{
+          if (this.dy!=dy){
           this.dy = dy;
-          console.log('velocity reset');
+          }
         }
       }
 
