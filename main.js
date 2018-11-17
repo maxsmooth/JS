@@ -36,6 +36,7 @@ const colorArray = [
 ]
 const rwidth = 10;
 const hratio = 0;
+const range = undefined;
 var maxheight;
 var rectArray = [];
 var h;
@@ -81,7 +82,7 @@ function Rect(x,h,dy){
 
 //Establish Rectangles
 function init(){
-  const range = innerWidth;
+  range = innerWidth;
   rectArray = [];
   var numrec=innerWidth/rwidth;
   console.log(numrec);
