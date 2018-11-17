@@ -30,7 +30,7 @@ const colorArray = [
   '#F2B134',
   '#ED553B',
 ]
-const widthratio = .2;
+const widthratio = .4;
 const rwidth = 10;
 const hratio = 0;
 var range;
