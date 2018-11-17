@@ -64,13 +64,13 @@ function Rect(x,h,dy){
     }
 
     this.update = function update(){
-      if (disfm(this.x) < range){
+      if (disfm(this.x) <= range){
           // this.mousedis(this.x);
           if (this.h < maxheight - disfm(this.x)){
             this.h +=dr;
         }
       } else{
-          if (this.h > maxheight && disfm(this.x) > range){
+          if (this.h > h){
             this.dy+=g;
           this.h-=this.dy;
         }
