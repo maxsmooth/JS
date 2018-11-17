@@ -66,7 +66,6 @@ function Rect(x,h,dy){
 
     this.update = function update(){
       if (disfm(this.x) <= range){
-          // this.mousedis(this.x);
           if (this.h < maxheight - disfm(this.x)){
             this.h +=dr;
         }
@@ -83,7 +82,7 @@ function Rect(x,h,dy){
 
 //Establish Rectangles
 function init(){
-  range = innerWidth/widthratio;
+  range = innerWidth*widthratio;
   rectArray = [];
   var numrec=innerWidth/rwidth;
   console.log(numrec);
