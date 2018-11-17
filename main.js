@@ -11,10 +11,9 @@ function(){
   init();
   console.log(innerHeight);
 })
-var ismousemove = undefined;
+
 window.addEventListener('mousemove',
 function(event){
-  ismousemove=true;
   mouse.x = event.x;
   mouse.y = event.y;
   })
@@ -59,10 +58,9 @@ function Rect(x,h,dy){
     }
 
     this.update = function update(){
-      if (ismousemove==true && this.h < innerHeight-mouse.y-this.mousedis(this.x) && (mouse.x - this.x)*range < rwidth && (mouse.x - this.x)*range > -rwidth){
+      if ((mouse.x - this.x)*range < rwidth && (mouse.x - this.x)*range > -rwidth){
           // this.mousedis(this.x);
-          if (this.h<(innerHeight-mouse.y)-this.mousedis(this.x)){
-            ismousemove=false;
+          if (this.h<innerHeight){
             this.h +=dr;
         }
       } else{
