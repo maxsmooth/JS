@@ -76,7 +76,9 @@ function Rect(x,h,dy){
           this.h-=this.dy;
         }
       }
-
+        if (this.y <= h){
+        this.dy = dy;
+        }
         this.draw();
     }
 }
