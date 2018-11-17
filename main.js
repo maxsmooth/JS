@@ -16,7 +16,7 @@ window.addEventListener('mousemove',
 function(event){
   mouse.x = event.x;
   mouse.y = event.y;
-  innerHeight - mouse.y = maxheight;
+  maxheight = innerHeight - mouse.y;
   })
 
 
