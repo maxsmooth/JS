@@ -38,10 +38,6 @@ const slope = 2;
 var maxheight;
 var rectArray = [];
 var h;
-//determine distance from the mouse to the block (absolute value)
-function disfm(xpos){
- return Math.abs(mouse.x-xpos)*slope; 
-}
 //Main "Class"
 function Rect(x,h,dy){
   this.color = colorArray[Math.floor(Math.random()*colorArray.length)];
@@ -89,6 +85,10 @@ function animate(){
   for (let i=0; i< rectArray.length; i++){
     rectArray[i].update();
   }
+}
+//determine distance from the mouse to the block (absolute value)
+function disfm(xpos){
+ return Math.abs(mouse.x-xpos)*slope; 
 }
 //begin the program loop
 init();
