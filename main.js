@@ -78,7 +78,6 @@ function Rect(x,h,dy){
           this.dy = dy;
           console.log('velocity reset');
         }
-        }
       }
 
         this.draw();
