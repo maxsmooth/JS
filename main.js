@@ -39,6 +39,10 @@ const hratio = 0;
 var rectArray = [];
 var h;
 //create rectangles
+function disfm(xpos){
+ return Math.abs(mouse.x-xpos); 
+}
+
 function Rect(x,h,dy){
   this.color = colorArray[Math.floor(Math.random()*colorArray.length)];
   this.x=x;
@@ -58,9 +62,9 @@ function Rect(x,h,dy){
     }
 
     this.update = function update(){
-      if (Math.abs((mouse.x - this.x)) < range){
+      if (disfm(this.x) < range){
           // this.mousedis(this.x);
-          if (this.h<innerHeight - (Math.abs(mouse.x-this.x))){
+          if (this.h < innerHeight - disfm(this.x)){
             this.h +=dr;
         }
       } else{
