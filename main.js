@@ -37,7 +37,7 @@ const colorArray = [
 const rwidth = 10;
 const hratio = 0;
 var rectArray = [];
-
+var h;
 //create rectangles
 function Rect(x,h,dy){
   this.color = colorArray[Math.floor(Math.random()*colorArray.length)];
@@ -64,7 +64,7 @@ function Rect(x,h,dy){
             this.h +=dr;
         }
       } else{
-          if (this.h > innerHeight - Math.abs(mouse.x-this.x)*range){
+          if (this.h > h){
             this.dy+=g;
           this.h-=this.dy;
         }
@@ -80,7 +80,7 @@ function init(){
   var numrec=innerWidth/rwidth;
   console.log(numrec);
   var xw = 0;
-  var h = Math.floor(innerHeight*hratio);
+  h = Math.floor(innerHeight*hratio);
   for(let i=0; i<numrec; i++){
     rectArray.push(new Rect(xw,h,dy));
     xw +=rwidth;
