@@ -24,7 +24,6 @@ var mouse = {
 const g = .1;
 const dr = 50;
 const dy = .1;
-
 const colorArray = [
   '#112F41',
   '#068587',
@@ -54,7 +53,6 @@ function Rect(x,h,dy){
     c.beginPath();
     c.fillStyle = this.color
     c.fillRect(this.x, canvas.height-this.h, rwidth, this.h);
-
     }
 //is run with every cycle of the animation function: the logic
     this.update = function update(){
@@ -76,19 +74,16 @@ function init(){
   range = innerWidth*widthratio;
   rectArray = [];
   var numrec=innerWidth/rwidth;
-  console.log(numrec);
   var xw = 0;
   h = Math.floor(innerHeight*hratio);
   for(let i=0; i<numrec; i++){
     rectArray.push(new Rect(xw,h,dy));
     xw +=rwidth;
   }
-  console.log(rectArray.length);
 }
 //Animation Loop
 function animate(){
   requestAnimationFrame(animate);
-
   c.beginPath();
   c.clearRect(0,0,innerWidth,innerHeight);
   for (let i=0; i< rectArray.length; i++){
