@@ -16,6 +16,7 @@ window.addEventListener('mousemove',
 function(event){
   mouse.x = event.x;
   mouse.y = event.y;
+  innerHeight - mouse.y = maxheight;
   })
 
 
@@ -36,6 +37,7 @@ const colorArray = [
 ]
 const rwidth = 10;
 const hratio = 0;
+var maxheight;
 var rectArray = [];
 var h;
 //create rectangles
@@ -64,11 +66,11 @@ function Rect(x,h,dy){
     this.update = function update(){
       if (disfm(this.x) < range){
           // this.mousedis(this.x);
-          if (this.h < innerHeight - disfm(this.x)){
+          if (this.h < maxheight - disfm(this.x)){
             this.h +=dr;
         }
       } else{
-          if (this.h > h){
+          if (this.h > maxheight){
             this.dy+=g;
           this.h-=this.dy;
         }
