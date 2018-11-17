@@ -70,7 +70,7 @@ function Rect(x,h,dy){
             this.h +=dr;
         }
       } else{
-          if (this.h > maxheight){
+          if (this.h > maxheight || disfm(this.x) > range){
             this.dy+=g;
           this.h-=this.dy;
         }
