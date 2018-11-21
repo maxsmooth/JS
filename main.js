@@ -31,7 +31,7 @@ const colorArray = [
   '#ED553B',
 ]
 const widthratio = .4;
-const rwidth = 1;
+const rwidth = .2;
 const hratio = 0;
 var range;
 const slope = 2;
