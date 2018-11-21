@@ -22,7 +22,7 @@ var mouse = {
   y: undefined
 }
 const g = .8;
-const dr = 75;
+const dr = 60;
 const dy = 0;
 const colorArray = [
   '#112F41',
