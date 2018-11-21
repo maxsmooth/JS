@@ -21,7 +21,7 @@ var mouse = {
   x: undefined,
   y: undefined
 }
-const g = .3;
+const g = .8;
 const dr = 50;
 const dy = 0;
 const colorArray = [
